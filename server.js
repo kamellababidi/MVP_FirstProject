@@ -49,7 +49,11 @@ request(options,function(err,result,body){
 })
 });
 app.get('/show',function(req,res){
-  console.log('here is your news')
+  db.find({},function(err,result){
+    if(err)
+      throw err;
+    res.send(JSON.stringify(result))
+  })
 })
 
 
