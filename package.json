@@ -1,0 +1,19 @@
+{
+  "name": "mvp_firstproject",
+  "version": "1.0.0",
+  "description": "news viewer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kamellababidi/MVP_FirstProject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kamellababidi/MVP_FirstProject/issues"
+  },
+  "homepage": "https://github.com/kamellababidi/MVP_FirstProject#readme"
+}
