@@ -1,15 +1,17 @@
 var express = require('express');
-//var db=require('../database')
+var db=require('./database')
 var request = require('request')
 var app = express();
  var bodyparser=require('body-parser')
  var urlencodedParser = bodyparser.urlencoded({ extended: false })
- app.use(express.static(__dirname + '/../public'));
+ app.use(express.static(__dirname));
  app.use(bodyparser.json())
  app.use(bodyparser.urlencoded())
 
 //res.sendFile(__dirname+'/repos.html')
-
+// app.get('/',function(req,res){
+//   res.sendFile(__dirname+'/kamel.html')
+// })
 app.post('/add',function(req,res){
   console.log(req.body)
   var options = {
@@ -28,7 +30,17 @@ request(options,function(err,result,body){
     res.send('404')
   }
   var entry=JSON.parse(body)
-  console.log("here is result:"+entry.articles)
+  console.log('hiiiii')
+   // var record = new db({ user_name: entry[i][0], repos:entry.articles[]});
+   //      record.save(function (err, result) {
+   //      if (err) return console.error(err);
+   //      console.log('here inside save :' +result)
+   //      }); 
+  // for(var i=0;i<entry.articles.length;i++){
+  //   console.log('hi')
+  //     console.log(entry.articles[i].description)
+  // }
+ // res.send(JSON.stringify(entry.articles[0]))
 })
 });
 app.get('/show',function(req,res){
@@ -41,4 +53,3 @@ var port = 8000;
 app.listen(port, function() {
   console.log(`listening on port ${port}`);
 });
-
