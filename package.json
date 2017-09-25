@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/kamellababidi/MVP_FirstProject/issues"
   },
-  "homepage": "https://github.com/kamellababidi/MVP_FirstProject#readme"
+  "homepage": "https://github.com/kamellababidi/MVP_FirstProject#readme",
+  "dependencies": {
+    "express": "^4.15.5",
+    "nodemon": "^1.12.1",
+    "request": "^2.82.0"
+  }
 }
