@@ -30,17 +30,22 @@ request(options,function(err,result,body){
     res.send('404')
   }
   var entry=JSON.parse(body)
-  console.log('hiiiii')
+  console.log(entry)
    // var record = new db({ user_name: entry[i][0], repos:entry.articles[]});
    //      record.save(function (err, result) {
    //      if (err) return console.error(err);
    //      console.log('here inside save :' +result)
    //      }); 
-  // for(var i=0;i<entry.articles.length;i++){
-  //   console.log('hi')
-  //     console.log(entry.articles[i].description)
-  // }
- // res.send(JSON.stringify(entry.articles[0]))
+  for(var i=0;i<entry.articles.length;i++){
+    console.log('hi')
+    var record = new db({ author: entry.articles[i].author,description:entry.articles[i].description,image:entry.articles[i].urlToImage});
+     record.save(function (err, result) {
+        if (err) return console.error(err);
+        res.sendFile(__dirname+'/middle.html')
+        }); 
+     // console.log(entry.articles[i].description)
+  }
+ //res.send(JSON.stringify(entry.articles[0]))
 })
 });
 app.get('/show',function(req,res){

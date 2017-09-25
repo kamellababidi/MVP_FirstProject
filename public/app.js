@@ -4,7 +4,7 @@ angular.module('news',[])
   // TODO
 
   controller:function(){
-  
+  	
   },
   template:`
       <form action="/add" method="post">
