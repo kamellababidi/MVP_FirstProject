@@ -1,31 +1,41 @@
-angular.module('news',[])
 
+angular.module('news',[])
 .component('app', {
-  // TODO
   controller:function(){
-  		this.news=[]
-  		this.click=function(){
-  			$.ajax({
-                 url: "http://127.0.0.1:8000/show",
-                 cache: false,
-                  success: function(data){
-         				this.news=data
-         				console.log(this.news)
-                  }
+  	 this.news=[]
+  	 var x=this
+  		 $.ajax({
+  		 	 async:false,
+             url: "http://127.0.0.1:8000/show",
+              cache: false,
+              dataType: 'json',
+              success: function(data){
+    			x.news=data
+    			console.log(x.news);
+
+            }
             })
-   		}
-   		console.log(this.news)
+  	   
+  		    this.click=function(){
+  			//console.log(this.news);
+   		    }
+   		//console.log(this.news)
   },
   template:`
       <form action="/add" method="post">
       <div>
       <h1>News viewer</h1>
-      Please enter news website you would like to add: <input name='website' value=''/>       
+      <h4>{{$ctrl.samer}}</h4>
+      Please enter news website you would like to add: <input name='website' />       
       <button > Add News </button>
     </div>
     </form>
-      <div>
-      <button ng-click='$ctrl.click()'> Show News </button>
+     
+    <div>
+    <newslist 
+    click='$ctrl.click.bind($ctrl)'
+    news='$ctrl.news'
+    />
     </div>
   `
 });
