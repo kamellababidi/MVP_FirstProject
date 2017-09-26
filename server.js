@@ -31,11 +31,7 @@ request(options,function(err,result,body){
   }
   var entry=JSON.parse(body)
   console.log(entry)
-   // var record = new db({ user_name: entry[i][0], repos:entry.articles[]});
-   //      record.save(function (err, result) {
-   //      if (err) return console.error(err);
-   //      console.log('here inside save :' +result)
-   //      }); 
+
   for(var i=0;i<entry.articles.length;i++){
     console.log('hi')
     var record = new db({ author: entry.articles[i].author,description:entry.articles[i].description,image:entry.articles[i].urlToImage});
@@ -58,7 +54,7 @@ app.get('/show',function(req,res){
 })
 
 
-var port = 8000;
+var port = process.env.PORT||8000;
 
 app.listen(port, function() {
   console.log(`listening on port ${port}`);
