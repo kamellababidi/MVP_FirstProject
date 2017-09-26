@@ -41,7 +41,8 @@ request(options,function(err,result,body){
     var record = new db({ author: entry.articles[i].author,description:entry.articles[i].description,image:entry.articles[i].urlToImage});
      record.save(function (err, result) {
         if (err) return console.error(err);
-        res.sendFile(__dirname+'/middle.html')
+        //res.sendFile(__dirname+'/middle.html')
+        res.send();
         }); 
      // console.log(entry.articles[i].description)
   }
