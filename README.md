@@ -1,6 +1,6 @@
 # MVP_FirstProject
 # Project Name #
-news viewer
+News viewer 
 
 <!-- 
 > This material was originally posted [here](http://www.quora.com/What-is-Amazons-approach-to-product-development-and-product-management). It is reproduced here for posterities sake.
@@ -19,16 +19,16 @@ Once the project moves into development, the press release can be used as a touc
  -->
  
 ## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
+  > The world news between ypur hands
 
 ## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  > fetch multiple news resource to one database 
 
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  > provide simplicity and flexibility to read all news sources , so you can choose your best news sources and put it in your account.  
 
 ## Problem ##
-  > Describe the problem your product solves.
+  > this app solve the problem of going to each news website and see it.
 
 ## Solution ##
   > Describe how your product elegantly solves the problem.
