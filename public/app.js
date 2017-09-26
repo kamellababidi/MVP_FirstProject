@@ -6,7 +6,7 @@ angular.module('news',[])
   	 var x=this
   		 $.ajax({
   		 	 async:false,
-             url: "http://127.0.0.1:8000/show",
+             url: "mongodb://kameldata:12345@ds151544.mlab.com:51544/kameldata/show",
               cache: false,
               dataType: 'json',
               success: function(data){
