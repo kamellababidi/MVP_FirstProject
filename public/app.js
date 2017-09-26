@@ -6,7 +6,7 @@ angular.module('news',[])
   	 var x=this
   		 $.ajax({
   		 	 async:false,
-             url: "http://127.0.0.1:8000/show",
+             url: "https://kamel94.herokuapp.com/show",
               cache: false,
               dataType: 'json',
               success: function(data){
