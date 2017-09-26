@@ -11,7 +11,5 @@ angular.module('news')
  		kamel="kamel"
  	 ng-repeat="kamel in $ctrl.array"/>
       </div>
-     
-
   `
 })
