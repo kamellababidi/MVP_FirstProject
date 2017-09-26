@@ -1,13 +1,18 @@
 angular.module('news')
 .component('newss', {
+  controller:function(){
+    console.log('hi there')
+  },
   bindings:{
-  	new:'<'
+  	kamel:'<'
   },
   template:`
        <div>
-          <h3 style="color:red;">The author is:{{$ctrl.new.author}}</h3>
-          <h4>Description: {{$ctrl.new.description}}</h4>
-          <img src={{$ctrl.new.image}} alt="Mountain View" style="width:304px;height:228px;">
+          <h2 style="color:blue;">The author is:{{$ctrl.kamel.author}}</h2>
+          <h3 style="color:green;">Description: {{$ctrl.kamel.description}}</h4>
+          <img src={{$ctrl.kamel.image}}
+          style="width:500px;height:300px;">
+          <br>
           ************************************************************
       </div>
   `

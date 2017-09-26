@@ -23,6 +23,7 @@
     "loadash": "^1.0.0",
     "mongoose": "^4.11.13",
     "nodemon": "^1.12.1",
+    "promise": "^8.0.1",
     "request": "^2.82.0"
   }
 }

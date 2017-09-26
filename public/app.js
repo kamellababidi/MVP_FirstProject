@@ -24,17 +24,14 @@ angular.module('news',[])
   template:`
       <form action="/add" method="post">
       <div>
-      <h1>News viewer</h1>
-      <h4>{{$ctrl.samer}}</h4>
+      <h1 style="position: static; color:red;">News viewer</h1>
       Please enter news website you would like to add: <input name='website' />       
       <button > Add News </button>
     </div>
     </form>
-     
     <div>
     <newslist 
-    click='$ctrl.click.bind($ctrl)'
-    news='$ctrl.news'
+    array='$ctrl.news'
     />
     </div>
   `

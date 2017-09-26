@@ -3,17 +3,15 @@ angular.module('news')
 	controller:function(){
 	},
   bindings:{
-  	click:'<',
-  	news:'<'
+  	array:'<'
   },
   template:`
-       <div>
-      <button ng-click='$ctrl.click()'> Show News </button>
-      </div> 
       <div>
- 	<newss 
- 	new='$ctrl.news[0]'
- 	/>
+ 	<newss
+ 		kamel="kamel"
+ 	 ng-repeat="kamel in $ctrl.array"/>
       </div>
+     
+
   `
 })

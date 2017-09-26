@@ -1,5 +1,6 @@
 var mongoose=require('mongoose');
 mongoose.connect('mongodb://localhost/newspaper');
+mongoose.Promise = Promise;  
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
