@@ -6,7 +6,7 @@ angular.module('news',[])
   	 var x=this
   		 $.ajax({
   		 	 async:false,
-             url: "mongodb://kameldata:12345@ds151544.mlab.com:51544/kameldata/show",
+             url: "https://kamel94.herokuapp.com/show",
               cache: false,
               dataType: 'json',
               success: function(data){
